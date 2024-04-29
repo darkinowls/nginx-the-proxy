@@ -4,8 +4,8 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
   exit 1
 fi
-#promocodes-trofim.darkinowls.com
-domains=(next-reviews.darkinowls.com )
+
+domains=(next-reviews.darkinowls.com promocodes-trofim.darkinowls.com)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="blackinowls@gmail.com" # Adding a valid address is strongly recommended
