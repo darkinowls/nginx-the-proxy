@@ -37,10 +37,10 @@ docker-compose run --rm --entrypoint "\
     -subj '/CN=localhost'" certbot
 echo
 
+ls -la $data_path/conf/live/
 
 echo "### Starting nginx ..."
 docker-compose up --force-recreate -d nginx
-docker-compose logs -f
 echo
 
 echo "### Deleting dummy certificate for $domains ..."
@@ -66,8 +66,6 @@ esac
 
 # Enable staging mode if needed
 if [ $staging != "0" ]; then staging_arg="--staging"; fi
-
-curl http://localhost
 
 docker-compose run --rm --entrypoint "\
   certbot certonly --webroot -w /var/www/certbot \
