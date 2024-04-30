@@ -38,7 +38,6 @@ for domain in "${domains[@]}"; do
       -subj '/CN=localhost'" certbot
 done
 
-ls -la $data_path/conf/live/
 
 echo "### Starting nginx ..."
 docker-compose up --force-recreate -d nginx
@@ -52,6 +51,7 @@ for domain in "${domains[@]}"; do
     rm -Rf /etc/letsencrypt/renewal/$domain.conf*" certbot
 done
 
+ls -la $data_path/conf/live/
 
 # Select appropriate email arg
 case "$email" in
