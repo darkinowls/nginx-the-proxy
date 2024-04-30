@@ -29,7 +29,7 @@ fi
 
 
 echo "### Starting init nginx ..."
-docker-compose up -d init_nginx
+docker-compose -f  docker-compose.init.yaml up -d
 echo
 
 
@@ -58,8 +58,8 @@ done
 echo
 
 echo "### Removing init nginx ..."
-docker-compose down
+docker-compose -f docker-compose.init.yaml down
 echo
 
 echo "### Start prod nginx ..."
-docker-compose up -d prod_nginx
+docker-compose up -d
