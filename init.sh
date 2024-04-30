@@ -33,8 +33,6 @@ docker-compose -f  docker-compose.init.yaml up -d
 echo
 
 
-ls -la $data_path/conf/live/
-
 # Select appropriate email arg
 case "$email" in
   "") email_arg="--register-unsafely-without-email" ;;
