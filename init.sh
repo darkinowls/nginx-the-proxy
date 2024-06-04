@@ -5,7 +5,12 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(next-reviews.darkinowls.com promocodes-trofim.darkinowls.com nest-auth.darkinowls.com nest-reservations.darkinowls.com)
+domains=(next-reviews.darkinowls.com
+          promocodes-trofim.darkinowls.com
+          nest-auth.darkinowls.com
+          nest-reservations.darkinowls.com
+          grafana.darkinowls.com
+          )
 rsa_key_size=4096
 data_path="./data/certbot"
 email="blackinowls@gmail.com" # Adding a valid address is strongly recommended
