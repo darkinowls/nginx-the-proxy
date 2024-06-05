@@ -1,1 +1,1 @@
-docker-compose down && rm -rf ./data/certbot
+docker-compose down && mv ./data/certbot ./backup/
