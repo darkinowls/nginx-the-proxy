@@ -1,2 +1,2 @@
 
-docker-compose down && cp -r  ./backup/certbot_$(date +"%Y%m%d")/* ./data/certbot/ && sh ./init.sh
+cp -r  ./backup/certbot_$(date +"%Y%m%d")/* ./data/certbot/ && docker-compose up -d
