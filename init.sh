@@ -6,7 +6,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
 fi
 
 domains=(next-reviews.darkinowls.com
-          promocodes-trofim.darkinowls.com
+          n8n.darkinowls.com
           nest-auth.darkinowls.com
           nest-reservations.darkinowls.com
           grafana.darkinowls.com
